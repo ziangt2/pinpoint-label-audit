@@ -1,0 +1,12 @@
+{
+  "unit": "earliest same normalized reference pair + same positive SET; >=2query rows, not human-verified intent",
+  "earliest_rows": 7846,
+  "multirow_groups": 1298,
+  "complete_groups": 1164,
+  "groups_missing_any_query": 134,
+  "complete_but_reference_changed": 820,
+  "eligible_groups": 344,
+  "eligible_queries": 2091,
+  "instructions_unchanged_all_eligible": true,
+  "no_model_based_selection": true
+}

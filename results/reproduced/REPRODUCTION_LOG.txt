@@ -1,0 +1,86 @@
+# CLEAN-ROOM REPRODUCTION RECORD
+# code: fresh 'git clone' of this repository at commit 16f65c2 (working tree clean)
+# inputs: fetched fresh with scripts/fetch_pinpoint.sh and scripts/fetch_dl19.sh into an empty directory
+#   PinPoint repo HEAD 059d6e4ae191d3f0775cbe2e9cf77baa0e714126; label/manifest blobs verified by git object ID
+#   sha256 labels_old.parquet     1f4c5b2119a94b9f7718f4aa02d94a15c90dc8da10bb8d26a882c02dd1b83434
+#   sha256 labels_current.parquet c17bb95b04488ae09f5c51d9d2f8840dded92e86f648250f068d619945e627e2
+#   sha256 labels_t0.parquet      0652545e457bd471ab654f20481bb16daa4c61a0d20ac3e88b6bb96f536e1201
+#   sha256 metrics_upstream.csv   1db23d3abae30891d416629f37b7c0c445b7d2efa87f250260bd4bb9dc5dffb3
+#   DL19: Parry-Parry/sigir25-annotation @ 12969fb4f189bd87fcfe3d4953d3ee0da110c379; qrels sha256 verified by fetch_dl19.sh
+# deviation from the default path (sandbox without a parquet engine): the three parquet label files were
+#   exported row-for-row to JSON with hyparquet 1.31.1 (pure-JS reader) and read with LABELS_FROM_JSON=1.
+#   With pandas+pyarrow installed, run without LABELS_FROM_JSON to read the parquet files directly.
+# command:
+#   SKIP_FETCH=1 LABELS_FROM_JSON=1 PYTHON=python3 IEEETRAN_DIR=<IEEEtran V1.8b> \
+#     bash scripts/reproduce_all.sh OUT data/pinpoint data/dl19
+# outcome: all result files identical to results/reproduced; figures pixel-identical to paper/figures;
+#   173/173 number checks pass; paper compiles to 8 pages with no LaTeX errors, overfull boxes or undefined refs.
+# ---------------------------------------------------------------------------------------------------
+# reproduce_all.sh  2026-09-26T08:46Z
+# repository commit: 16f65c2c39550ea1c9f2af578705381f95190d50
+# working tree clean: yes
+# Python 3.11.15; Linux 6.18.44-fc-v42 x86_64
+#   numpy 2.4.4
+#   pandas 3.0.2
+#   pyarrow not available (ModuleNotFoundError)
+#   matplotlib 3.10.9
+# pdflatex: pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)
++ python3 -m src.audit.frame --data <cleanroom>/data/pinpoint --out <cleanroom>/out
+{
+ "earliest_rows": 7846,
+ "multirow_groups": 1298,
+ "groups_missing_any_query": 134,
+ "complete_groups": 1164,
+ "complete_but_reference_changed": 820,
+ "eligible_groups": 344,
+ "eligible_queries": 2091,
+ "instruction_changes": 0,
+ "split": 121,
+ "split_with_some_unchanged": 119,
+ "split_all_rows_changed": 2,
+ "changed_rows_in_other_groups": 323
+}
++ python3 -m src.audit.score --data <cleanroom>/data/pinpoint --frame <cleanroom>/out/frame.json --out <cleanroom>/out
+scored 29274 rows; common domain size 30535
++ python3 -m src.audit.bootstrap --data <cleanroom>/data/pinpoint --in <cleanroom>/out --out <cleanroom>/out
+wrote 168 summary rows, 504 contrasts, 168 bound rows to <cleanroom>/out
++ python3 -m src.dl19.check --parry <cleanroom>/data/dl19/parry --qrels <cleanroom>/data/dl19/2019qrels-pass.txt --out <cleanroom>/out
+colbert                0.6813 0.6134 -0.0679 [-0.1276, -0.0167]
+mono-t5-3b             0.7131 0.6609 -0.0522 [-0.1049, -0.0032]
+mono-t5-base           0.7008 0.6361 -0.0647 [-0.1189, -0.0127]
+rank-zephyr            0.7035 0.6619 -0.0416 [-0.0982, +0.0075]
+sparse-cross-encoder   0.6944 0.6239 -0.0705 [-0.1306, -0.0203]
+splade                 0.7126 0.6495 -0.0631 [-0.1158, -0.0146]
+41 eligible topics; {'not_two_annotators': {'8': ['168216']}, 'short_runs': ['855410']}
+## compare with committed results/reproduced
+summary.csv: max |diff| vs committed = 0.0e+00
+model_contrasts.csv: max |diff| vs committed = 0.0e+00
+identified_bounds.csv: max |diff| vs committed = 0.0e+00
+dl19_ndcg10.csv: max |diff| vs committed = 0.0e+00
+dl19_pairs.csv: max |diff| vs committed = 0.0e+00
+robustness.csv: max |diff| vs committed = 0.0e+00
+case.json: identical to committed
+diagnostics.json: identical to committed
+frame_summary.json: identical to committed
+robustness.json: identical to committed
+evaluator_sensitivity.json: identical to committed
+four_cell_S1_vs_S1_reranked.json: identical to committed
+comparison with v10 written to <cleanroom>/out/comparison_with_v10.json
++ python3 -m tests.test_audit
+10 tests passed
+## figures from <cleanroom>/out
++ python3 paper/code/make_figures.py --results <cleanroom>/out --figdir <cleanroom>/out/figures
+figures written to <cleanroom>/out/figures
+fig1_design_case.png: pixel-identical to paper/figures
+fig2_quality.png: pixel-identical to paper/figures
+fig3_main_findings.png: pixel-identical to paper/figures
+fig4_ranges.png: pixel-identical to paper/figures
+## numbers in paper/main.tex vs <cleanroom>/out
++ python3 paper/code/verify_numbers.py --results <cleanroom>/out --tex paper/main.tex
+results: <cleanroom>/out
+tex: paper/main.tex
+checked 173 items; errors: 0
+## compile paper with <cleanroom>/out/figures
+pages: 8
+LaTeX: no errors, overfull boxes or undefined references
+# done

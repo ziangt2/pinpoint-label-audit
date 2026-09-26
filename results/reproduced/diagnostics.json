@@ -1,0 +1,21 @@
+{
+ "split_at_first_replacement": 121,
+ "split_groups_still_split_on_common_domain": 121,
+ "negatives_projected": {
+  "rows_changed": 186,
+  "rows": 2091,
+  "groups_sharing_old": 344,
+  "groups_sharing_current": 292,
+  "split_groups_losing_shared_negatives": 22,
+  "other_groups_losing_shared_negatives": 30
+ },
+ "unique_denominator_gain_current_AP10": {
+  "S1": 0.0014660484037035456,
+  "S1 reranked": 0.001763181785812789,
+  "S2": 0.001346690061149421,
+  "MetaCLIP2 Combined": 0.00115374055373429,
+  "MetaCLIP2 Image-only": 0.0005345119077441274,
+  "MetaCLIP2 Text-only": 0.0008175234863593129,
+  "MetaCLIP2 SLERP": 0.0010507591323189916
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "cells": {
+  "f00": 0.2640797135626305,
+  "f10": 0.306850849945519,
+  "f01": 0.19994920860545323,
+  "f11": 0.2225881679079339
+ },
+ "total": -0.04149154565469659,
+ "output_first": {
+  "output_under_old_labels": 0.042771136382888486,
+  "label_under_new_output": -0.08426268203758508
+ },
+ "label_first": {
+  "label_under_old_output": -0.06413050495717726,
+  "output_under_new_labels": 0.022638959302480666
+ },
+ "interaction": -0.02013217708040782,
+ "semantic_robustness_claim": null,
+ "output_diagnostics_mean": {
+  "ordered_mismatch": 1.0,
+  "set_nonoverlap": 0.607747489239598,
+  "prefix_disagreement": 0.7051113995733792
+ },
+ "queries": 2091,
+ "runs": {
+  "R0": "S1",
+  "R1": "S1 reranked"
+ },
+ "across_version_output_change": 0.0
+}

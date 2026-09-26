@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or the frozen results, please cite the paper."
+title: "Relevance-Label Revisions in PinPoint: A Fixed-Output Audit of Two Public Releases"
+authors:
+  - family-names: Tan
+    given-names: Ziang
+    affiliation: "Department of Electrical and Computer Engineering, University of Washington"
+    email: ziangt2@uw.edu
+date-released: 2026-09-30
+repository-code: "https://github.com/ziangt2/pinpoint-label-audit"

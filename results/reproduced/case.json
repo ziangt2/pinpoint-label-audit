@@ -1,0 +1,513 @@
+{
+ "selection_rule": "among split groups in which the MetaCLIP2 Image-only top-10 contains an item whose positive status differs between the two label versions for some query, take the group whose current Image-only AP@10 range is the median. With an even number of candidates the lower median is used, i.e. position (n - 1) // 2 (0-based) after sorting by (range, group id) ascending; ties in range are broken by group id. Image-only rankings are identical within every matched group, so the case isolates the label change. The case documents what the public files contain; it does not judge which label version is correct or whether the requests are semantically equivalent. ",
+ "n_eligible_groups": 44,
+ "median_position_1based": 22,
+ "tie_at_median": false,
+ "eligible_sorted": [
+  {
+   "group": "g0080",
+   "range_current_image_only": 0.01
+  },
+  {
+   "group": "g0104",
+   "range_current_image_only": 0.011111111111
+  },
+  {
+   "group": "g0285",
+   "range_current_image_only": 0.0125
+  },
+  {
+   "group": "g0179",
+   "range_current_image_only": 0.013888888889
+  },
+  {
+   "group": "g0063",
+   "range_current_image_only": 0.015238095238
+  },
+  {
+   "group": "g0312",
+   "range_current_image_only": 0.02
+  },
+  {
+   "group": "g0200",
+   "range_current_image_only": 0.022222222222
+  },
+  {
+   "group": "g0333",
+   "range_current_image_only": 0.033333333333
+  },
+  {
+   "group": "g0153",
+   "range_current_image_only": 0.033333333333
+  },
+  {
+   "group": "g0206",
+   "range_current_image_only": 0.033333333333
+  },
+  {
+   "group": "g0254",
+   "range_current_image_only": 0.033333333333
+  },
+  {
+   "group": "g0110",
+   "range_current_image_only": 0.037037037037
+  },
+  {
+   "group": "g0201",
+   "range_current_image_only": 0.037037037037
+  },
+  {
+   "group": "g0278",
+   "range_current_image_only": 0.04
+  },
+  {
+   "group": "g0073",
+   "range_current_image_only": 0.042857142857
+  },
+  {
+   "group": "g0075",
+   "range_current_image_only": 0.05
+  },
+  {
+   "group": "g0241",
+   "range_current_image_only": 0.05431547619
+  },
+  {
+   "group": "g0072",
+   "range_current_image_only": 0.057142857143
+  },
+  {
+   "group": "g0232",
+   "range_current_image_only": 0.062301587302
+  },
+  {
+   "group": "g0105",
+   "range_current_image_only": 0.0625
+  },
+  {
+   "group": "g0228",
+   "range_current_image_only": 0.065
+  },
+  {
+   "group": "g0039",
+   "range_current_image_only": 0.07
+  },
+  {
+   "group": "g0178",
+   "range_current_image_only": 0.074285714286
+  },
+  {
+   "group": "g0053",
+   "range_current_image_only": 0.083333333333
+  },
+  {
+   "group": "g0231",
+   "range_current_image_only": 0.083333333333
+  },
+  {
+   "group": "g0287",
+   "range_current_image_only": 0.083333333333
+  },
+  {
+   "group": "g0292",
+   "range_current_image_only": 0.083333333333
+  },
+  {
+   "group": "g0187",
+   "range_current_image_only": 0.099166666667
+  },
+  {
+   "group": "g0164",
+   "range_current_image_only": 0.1
+  },
+  {
+   "group": "g0317",
+   "range_current_image_only": 0.125
+  },
+  {
+   "group": "g0302",
+   "range_current_image_only": 0.145238095238
+  },
+  {
+   "group": "g0342",
+   "range_current_image_only": 0.145833333333
+  },
+  {
+   "group": "g0128",
+   "range_current_image_only": 0.159722222222
+  },
+  {
+   "group": "g0165",
+   "range_current_image_only": 0.166666666667
+  },
+  {
+   "group": "g0336",
+   "range_current_image_only": 0.166666666667
+  },
+  {
+   "group": "g0282",
+   "range_current_image_only": 0.191071428571
+  },
+  {
+   "group": "g0051",
+   "range_current_image_only": 0.210317460317
+  },
+  {
+   "group": "g0327",
+   "range_current_image_only": 0.216666666667
+  },
+  {
+   "group": "g0050",
+   "range_current_image_only": 0.221428571429
+  },
+  {
+   "group": "g0158",
+   "range_current_image_only": 0.242857142857
+  },
+  {
+   "group": "g0064",
+   "range_current_image_only": 0.288888888889
+  },
+  {
+   "group": "g0309",
+   "range_current_image_only": 0.332698412698
+  },
+  {
+   "group": "g0286",
+   "range_current_image_only": 0.340740740741
+  },
+  {
+   "group": "g0291",
+   "range_current_image_only": 0.375
+  }
+ ],
+ "eligible_range_median": 0.07214285714285715,
+ "case_group": "g0039",
+ "reference": [
+  "bba51476b6f852d27348c2dd55ac82d9",
+  null
+ ],
+ "top10_image_only": [
+  "bba51476b6f852d27348c2dd55ac82d9",
+  "8f18a69b29c5b8a8f8b43a7a12f8b29d",
+  "062636d68b6f8bf4e2edd5c45552f4e1",
+  "2bdc7e6232bce3a3448cb9821fdc86e6",
+  "b6e689f0a8e6e9a2e0ad7da142401109",
+  "0ce548138d6325ccc7a52624400abcb6",
+  "4926372889d7a49d5012c1b39efcee5d",
+  "ff6d6623376f4bbc7abbbb412d84321b",
+  "b1e872d81177787fd1edca6d4892864a",
+  "2d735b0268eef42fae8b60801c8aeb01"
+ ],
+ "case_range_image_only": {
+  "old": 0.0,
+  "new": 0.06999999999999999
+ },
+ "case_range_S1_reranked": {
+  "old": 0.2766666666666667,
+  "new": 0.47
+ },
+ "queries": [
+  {
+   "query_id": "query_01140",
+   "instruction": "Color this item matte black",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "both",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.09
+    },
+    "S1": {
+     "AP10_old": 0.5657142857142856,
+     "AP10_new": 0.5657142857142856
+    },
+    "S1 reranked": {
+     "AP10_old": 0.6,
+     "AP10_new": 0.6
+    }
+   }
+  },
+  {
+   "query_id": "query_01141",
+   "instruction": "color this item matte black",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "both",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.09
+    },
+    "S1": {
+     "AP10_old": 0.48571428571428565,
+     "AP10_new": 0.48571428571428565
+    },
+    "S1 reranked": {
+     "AP10_old": 0.58,
+     "AP10_new": 0.58
+    }
+   }
+  },
+  {
+   "query_id": "query_01142",
+   "instruction": "Paint this dresser a matte black.",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "both",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.09
+    },
+    "S1": {
+     "AP10_old": 0.49904761904761896,
+     "AP10_new": 0.49904761904761896
+    },
+    "S1 reranked": {
+     "AP10_old": 0.4833333333333333,
+     "AP10_new": 0.4833333333333333
+    }
+   }
+  },
+  {
+   "query_id": "query_01143",
+   "instruction": "Could you recolor this piece to a matte black finish?",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "0f55821990e9c922226abfcac5bb76f0",
+    "2d735b0268eef42fae8b60801c8aeb01"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "old_only",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.02
+    },
+    "S1": {
+     "AP10_old": 0.4883333333333333,
+     "AP10_new": 0.2
+    },
+    "S1 reranked": {
+     "AP10_old": 0.76,
+     "AP10_new": 0.16666666666666666
+    }
+   }
+  },
+  {
+   "query_id": "query_01144",
+   "instruction": "Apply a matte black finish to this piece without changing anything else.",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "e14b4093a10b17d1eeab7a51d639a339",
+    "0f55821990e9c922226abfcac5bb76f0",
+    "2d735b0268eef42fae8b60801c8aeb01"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "old_only",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.02
+    },
+    "S1": {
+     "AP10_old": 0.4,
+     "AP10_new": 0.2
+    },
+    "S1 reranked": {
+     "AP10_old": 0.55,
+     "AP10_new": 0.13
+    }
+   }
+  },
+  {
+   "query_id": "query_01145",
+   "instruction": "Please render the same dresser in a uniform matte-black finish, preserving its silhouette and proportions.",
+   "instruction_unchanged": true,
+   "positives_old": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "positives_current": [
+    "2d735b0268eef42fae8b60801c8aeb01",
+    "2bdc7e6232bce3a3448cb9821fdc86e6",
+    "18e42e39265241e9252ae1454c3382e7",
+    "21ebd2822862c000d6acaadb23091a9f",
+    "76eafcbab7144f9c03a908a6a1f75616"
+   ],
+   "top10_status": [
+    "none",
+    "none",
+    "none",
+    "both",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "both"
+   ],
+   "scores": {
+    "MetaCLIP2 Image-only": {
+     "AP10_old": 0.09,
+     "AP10_new": 0.09
+    },
+    "S1": {
+     "AP10_old": 0.4083333333333333,
+     "AP10_new": 0.4083333333333333
+    },
+    "S1 reranked": {
+     "AP10_old": 0.5422222222222223,
+     "AP10_new": 0.5422222222222223
+    }
+   }
+  }
+ ],
+ "context": {
+  "split_group_sizes": {
+   "6": 116,
+   "11": 2,
+   "5": 2,
+   "12": 1
+  },
+  "distinct_current_sets_per_split_group": {
+   "2": 121
+  },
+  "changed_rows_per_split_group": {
+   "1": 31,
+   "2": 23,
+   "3": 22,
+   "4": 21,
+   "5": 22,
+   "6": 2
+  },
+  "changed_rows_in_split_groups": 349,
+  "median_jaccard_old_vs_current_changed_rows": 0.21428571428571427,
+  "changed_rows_with_zero_overlap": 68,
+  "rows_with_duplicate_positive_ids": {
+   "old_release": 0,
+   "current_release": 1114,
+   "old_frame": 0,
+   "current_frame": 289
+  },
+  "rows_old_release": 7846,
+  "rows_current_release": 7635,
+  "shared_rows_with_changed_positive_set": 2823
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "earliest_rows": 7846,
+ "multirow_groups": 1298,
+ "groups_missing_any_query": 134,
+ "complete_groups": 1164,
+ "complete_but_reference_changed": 820,
+ "eligible_groups": 344,
+ "eligible_queries": 2091,
+ "instruction_changes": 0,
+ "split": 121,
+ "split_with_some_unchanged": 119,
+ "split_all_rows_changed": 2,
+ "changed_rows_in_other_groups": 323
+}

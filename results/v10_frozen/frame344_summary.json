@@ -1,0 +1,9 @@
+{
+  "groups": 344,
+  "queries": 2091,
+  "split": 121,
+  "split_already_t0": 121,
+  "instruction_changes": 0,
+  "split_with_some_unchanged": 119,
+  "split_all_rows_changed": 2
+}

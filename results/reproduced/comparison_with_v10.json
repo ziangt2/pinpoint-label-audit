@@ -1,0 +1,33 @@
+{
+ "summary.csv": {
+  "old": 3.3306690738754696e-16,
+  "new": 3.0531133177191805e-16,
+  "delta": 2.220446049250313e-16,
+  "groups": 0.0,
+  "queries": 0.0,
+  "components": 0.0,
+  "ci_low": 0.0014239860534025171,
+  "ci_high": 0.002037950356580512
+ },
+ "model_contrasts.csv": {
+  "old_difference": 3.608224830031759e-16,
+  "new_difference": 3.0531133177191805e-16,
+  "difference_change": 3.194059600142296e-16,
+  "old_ci_low": 0.0029353562280755585,
+  "old_ci_high": 0.0025347546763589412,
+  "new_ci_low": 0.0022034850423817785,
+  "new_ci_high": 0.0024394573484092796,
+  "change_ci_low": 0.0019192314917126745,
+  "change_ci_high": 0.002553651784315575
+ },
+ "identified_bounds.csv": {
+  "old_low": 1.3877787807814457e-15,
+  "old_high": 0.0008968609865470656,
+  "new_low": 1.0269562977782698e-15,
+  "new_high": 0.0008968609865470933,
+  "delta_low": 0.0008968609865470656,
+  "delta_high": 0.0008968609865470933,
+  "max_abs_diff_AP10_P10_only": 1.3877787807814457e-15
+ },
+ "frame_counts_identical": true
+}
